@@ -12,6 +12,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.app.backup.BackupManager;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 	private boolean bt_scanning = false;
 	private boolean is_watch = false;
 	private String shared_name = "wit_player_shared_preferences";
+	private ReactApplicationContext context = null;
 
 	private BroadcastReceiver bt_info_receiver = null;
 
@@ -44,6 +46,7 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 
 	public RNSharedPreferencesModule(ReactApplicationContext reactContext) {
 		super(reactContext);
+		context = reactContext;
 	}
 
 	@Override
@@ -144,6 +147,11 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 			initSharedHandler();
 			SharedDataProvider.deleteSharedValue(key);
 		}
+
+	@ReactMethod
+	public void scheduleBackup() {
+		new BackupManager(context).dataChanged();
+	}
 
 
 }
