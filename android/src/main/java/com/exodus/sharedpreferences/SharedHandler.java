@@ -1,4 +1,4 @@
-package in.sriraman.sharedpreferences;
+package com.exodus.sharedpreferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;

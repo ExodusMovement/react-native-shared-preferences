@@ -1,4 +1,4 @@
-package in.sriraman.sharedpreferences;
+package com.exodus.sharedpreferences;
 
 import java.util.ArrayList;
 import java.util.List;

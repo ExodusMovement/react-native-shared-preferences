@@ -1,4 +1,4 @@
-package in.sriraman.sharedpreferences;
+package com.exodus.sharedpreferences;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -26,7 +26,7 @@ public class RNSharedPreferencesModule extends ReactContextBaseJavaModule {
 	private ArrayList<BluetoothDevice> bt_device_list = null;
 	private boolean bt_scanning = false;
 	private boolean is_watch = false;
-	private String shared_name = "wit_player_shared_preferences";
+	private String shared_name = "exodus";
 	private ReactApplicationContext context = null;
 
 	private BroadcastReceiver bt_info_receiver = null;

@@ -5,19 +5,20 @@ Android's Native key value storage system in React Native
 ## Installation
 
 ### < RN 0.47
+
 ```bash
 npm install react-native-shared-preferences@0.0.8 --save
 ```
 
 ### >= RN 0.47
+
 ```bash
 npm install react-native-shared-preferences --save
 ```
 
 ## Project setup and initialization
 
-
-* In `android/settings.gradle`
+- In `android/settings.gradle`
 
 ```gradle
 ...
@@ -25,7 +26,7 @@ include ':react-native-shared-preferences', ':app'
 project(':react-native-shared-preferences').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-shared-preferences/android')
 ```
 
-* In `android/app/build.gradle`
+- In `android/app/build.gradle`
 
 ```gradle
 ...
@@ -37,10 +38,10 @@ dependencies {
 
 ```
 
-* Register Module (in MainApplication.java)
+- Register Module (in MainApplication.java)
 
 ```java
-import in.sriraman.sharedpreferences.RNSharedPreferencesReactPackage;  // <--- import
+import com.exodus.sharedpreferences.RNSharedPreferencesReactPackage;  // <--- import
 
 public class MainActivity extends ReactActivity {
   ......
@@ -58,69 +59,70 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-
 ## Usage
 
 #### Import
 
 ```javascript
-var SharedPreferences = require('react-native-shared-preferences');
+var SharedPreferences = require('react-native-shared-preferences')
 ```
 
 #### Configure name of preferences file. (Optional. Must be called before other functions.)
 
 ```javascript
-SharedPreferences.setName("name");
+SharedPreferences.setName('name')
 ```
 
 #### Set Item
 
 ```javascript
-SharedPreferences.setItem("key","value");
+SharedPreferences.setItem('key', 'value')
 ```
 
 #### Get an value
 
 ```javascript
-SharedPreferences.getItem("key", function(value){
-  console.log(value);
-});
+SharedPreferences.getItem('key', function (value) {
+  console.log(value)
+})
 ```
 
 #### Get multiple items
 
 ```javascript
-SharedPreferences.getItems(["key1","key2"], function(values){
+SharedPreferences.getItems(['key1', 'key2'], function (values) {
   console.log(values)
-});
+})
 ```
 
 #### Get all values
 
 ```javascript
-SharedPreferences.getAll(function(values){
-  console.log(values);
-});
+SharedPreferences.getAll(function (values) {
+  console.log(values)
+})
 ```
 
 #### Clear all values
 
 ```javascript
-SharedPreferences.clear();
+SharedPreferences.clear()
 ```
 
 #### Get all keys - returns promise with array of keys
+
 ```javascript
-SharedPreferences.getAllKeys(function(keys){
-  console.log(keys);
-});
+SharedPreferences.getAllKeys(function (keys) {
+  console.log(keys)
+})
 ```
 
 #### Remove Item
+
 ```javascript
-SharedPreferences.removeItem("key");
+SharedPreferences.removeItem('key')
 ```
 
 ## Credits
 
-[Sujith Niraikulathan](http://bit.ly/sujithkanna "Sujith").
+[Sujith Niraikulathan](http://bit.ly/sujithkanna 'Sujith').

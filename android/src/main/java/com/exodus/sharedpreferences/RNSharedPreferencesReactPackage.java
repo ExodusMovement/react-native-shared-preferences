@@ -1,7 +1,7 @@
-package in.sriraman.sharedpreferences;
+package com.exodus.sharedpreferences;
 
 import com.facebook.react.ReactPackage;
-import in.sriraman.sharedpreferences.RNSharedPreferencesModule;
+import com.exodus.sharedpreferences.RNSharedPreferencesModule;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
